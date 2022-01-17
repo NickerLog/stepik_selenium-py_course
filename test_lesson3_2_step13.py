@@ -2,6 +2,7 @@ from selenium import webdriver
 import unittest
 import time
 
+
 class RegistrationTest(unittest.TestCase):
     def test_registration1(self):
         link = "http://suninjuly.github.io/registration1.html"
@@ -20,6 +21,7 @@ class RegistrationTest(unittest.TestCase):
         welcome_text = welcome_text_elt.text
         browser.quit()
         self.assertEqual("Congratulations! You have successfully registered!", welcome_text, "Failed Registration #1")
+
     def test_registration2(self):
         link = "http://suninjuly.github.io/registration2.html"
         browser = webdriver.Chrome()
